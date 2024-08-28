@@ -1,4 +1,4 @@
-<p align="center"><img src="/art/logo.svg" alt="Logo Laravel Breeze"></p>
+<p align="center"><img src="[/art/logo.svg](https://btssio-ccicampus-strasbourg.fr/wp-content/uploads/2022/12/socialcard-2.png)" alt="Logo Laravel Breeze"></p>
 
 <p align="center">
     <a href="https://packagist.org/packages/laravel/breeze">
