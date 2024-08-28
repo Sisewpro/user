@@ -49,7 +49,8 @@
                 </div>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <x-primary-button class="ms-3">Save</x-primary-button>
+                <x-primary-button class="ms-3">
+                    {{ __('Save') }}</x-primary-button>
                 <x-secondary-button x-on:click="$dispatch('close')" >
                     {{ __('Cancel') }}
                 </x-secondary-button>
