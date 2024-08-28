@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <form action="{{ route('timer-cards.store') }}" method="POST" class="mb-4">
                 @csrf
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Tambah Loket</button>
+                <x-secondary-button type="submit">Tambah Loket</x-secondary-button>
             </form>
 
             <div class="grid grid-cols-4 gap-4 grid-cols-sm-1">
