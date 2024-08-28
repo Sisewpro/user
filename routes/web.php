@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CountTimeController; // Import controller untuk counttime
+use App\Http\Controllers\TimerCardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,5 +20,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/counttime', [CountTimeController::class, 'index'])->name('counttime');
 });
+
+Route::get('/dashboard', [TimerCardController::class, 'index'])->name('dashboard');
+Route::post('/timer-cards', [TimerCardController::class, 'store'])->name('timer-cards.store');
+Route::delete('/timer-cards/{id}', [TimerCardController::class, 'destroy'])->name('timer-cards.destroy');
+Route::post('/timer-cards/{id}/update', [TimerCardController::class, 'update'])->name('timer-cards.update');
+Route::put('/timer-cards/{id}', [TimerCardController::class, 'update'])->name('timer-cards.update');
 
 require __DIR__.'/auth.php';
