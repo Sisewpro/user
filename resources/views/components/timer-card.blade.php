@@ -17,7 +17,7 @@
 
     <div class="text-center">
         <label id="statusDisplay_{{ $id }}" for="timeInput_{{ $id }}" class="block text-lg font-bold text-green-500">{{ $status }}</label>
-        <input id="timeInput_{{ $id }}" type="text" value="{{ $time }}" class="text-lg font-bold text-gray-700 text-center border-2 border-gray-300 rounded-lg w-2/3 mx-auto">
+        <input id="timeInput_{{ $id }}" type="text" value="{{ $time }}" class="text-2xl font-bold text-gray-700 text-center border-none rounded-lg w-2/3 mx-auto">
     </div>
 
     <div class="mt-4 flex justify-center space-x-2">
@@ -53,7 +53,7 @@
             const statusDisplay = document.getElementById('statusDisplay_' + cardId);
             statusDisplay.textContent = status;
             statusDisplay.classList.toggle('text-green-500', status === "Ready");
-            statusDisplay.classList.toggle('text-yellow-500', status === "Running");
+            statusDisplay.classList.toggle('text-gray-500', status === "Running");
         }
 
         document.getElementById('startTimer_' + cardId).addEventListener('click', () => {
