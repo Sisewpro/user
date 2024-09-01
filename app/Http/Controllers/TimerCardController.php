@@ -21,13 +21,11 @@ class TimerCardController extends Controller
         $count = TimerCard::count();
 
         // Tentukan nama default user (staff 1, 2, 3, ...)
-        $defaultUserName = 'staff ' . ($count + 1);
 
         // Buat card baru dengan nilai default
         TimerCard::create([
-            'card_name' => 'Loket ' . ($count + 1),
+            'card_name' => 'Locker ' . ($count + 1),
             'user_id' => null,
-            'user_name' => $defaultUserName,
             'time' => '00:00:00',
             'status' => 'Ready',
         ]);
@@ -43,7 +41,7 @@ class TimerCardController extends Controller
         $timerCard->delete();
         
         // Redirect ke halaman dashboard setelah penghapusan
-        return redirect()->route('dashboard')->with('success', 'Timer card berhasil dihapus.');
+        return redirect()->route('dashboard')->with('success', 'Locker berhasil dihapus.');
     }
 
     public function update(Request $request, $id)
